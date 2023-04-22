@@ -176,5 +176,119 @@ hist(rchisq(n, v), xlab = "X", ylab = "Probabilitas", main = "Histogram Chi-Squa
 # Jawab : 
 rataan <- v <- 10
 rataan
-varian = 2 * v
+varian <- 2 * v
 varian
+
+# No 4
+# Diketahui data bangkitan acak sebanyak 100 dengan mean = 45 dan sd = 5.
+# Tentukan:
+
+# Point 4a.
+# Fungsi probabilitas dari distribusi Normal P(X1 ≤ x ≤ X2), hitung z-scorenya
+# dan plot data bangkitan acaknya dalam bentuk grafik. Petunjuk (gunakan fungsi plot()).
+# Jawab : 
+# f(x) = (1/5√(2π)) e^(-1/2((x-45)/5)^2)
+set.seed(123456789)
+n <- 100
+mean <- 45
+sd <- 5
+data <- rnorm(n=n, mean=mean, sd=sd)
+data
+summary(data)
+z_scores <- (data-mean(data))/sd(data)
+z_scores
+probs <- pnorm(runif(1, mean, max(data)), mean, sd) - pnorm(runif(1, min(data), mean), mean, sd)
+probs
+plot(data)
+
+# Poin 4b.
+# Gambarkan histogram dari distribusi Normal dengan breaks 50
+# Jawab : 
+set.seed(123456789)
+n <- 100
+mean <- 45
+sd <- 5
+data <- rnorm(n=n, mean=mean, sd=sd)
+breaks = 50
+hist(data, breaks, main = "Histogram distribusi normal")
+
+# Poin 4c.
+# Nilai varian (σ²) dari hasil data bangkitan acak distribusi Normal.
+# Jawab : 
+set.seed(123456789)
+n <- 100
+mean <- 45
+sd <- 5
+data <- rnorm(n=n, mean=mean, sd=sd)
+varian = sd(data) ^ 2
+varian
+
+# No 5
+# Kerjakanlah menggunakan distribusi T-Student
+
+# Poin 5a.
+# Berapa probabilitas terjadinya suatu peristiwa acak X kurang dari -2,34 dengan
+# 6 derajat kebebasan?
+# Jawab : 
+q <- -2.34
+df <- 6
+ans <- pt(q=q, df=df)
+ans
+
+# Poin 5b.
+# Berapa probabilitas terjadinya suatu peristiwa acak X lebih dari 1,34 dengan 6
+# derajat kebebasan?
+# Jawab :   
+q <- 1.34
+df <- 6
+left = FALSE
+ans <- pt(q=q, df=df, lower.tail = left)
+ans
+
+# Point 5c.
+# Berapa probabilitas terjadinya suatu peristiwa acak X kurang dari -1,23 atau
+# lebih besar dari 1,23 dengan 3 derajat kebebasan?
+# Jawab : 
+q <- -1.23
+df <- 3
+ans <- 2 * pt(q=q, df=df)
+ans
+
+# Poin 5d.
+# Berapa probabilitas terjadinya suatu peristiwa acak X berada di antara -0,94
+# dan 0,94 dengan 14 derajat kebebasan?
+# Jawab : 
+q <- -0.94
+df <- 14
+ans <- 1 - ( 2 * pt(q=q, df=df))
+ans
+
+# Poin 5e.
+# Berapa nilai t-score dengan 25 derajat kebebasan yang memiliki luasan 0,125
+# satuan persegi di bawah kurva dan di sebelah kanan t-score tersebut?
+# Jawab : 
+x <- 1 - 0.125
+df <- 25
+ans <- qt(x, df=df)
+ans
+
+# Poin 5f.
+# Berapa nilai t-score dengan 11 derajat kebebasan yang memiliki luasan 0,75
+# satuan persegi di bawah kurva dan di antara t-score tersebut dan negatif dari
+# nilai t-score tersebut?
+# Jawab : 
+x <- 0.75 + ((1-0.75)/2)
+df <- 11
+ans <- qt(x, df=df)
+ans
+
+# Poin 5g.
+# Berapa nilai t-score dengan 23 derajat kebebasan yang memiliki luasan 0,0333
+# satuan persegi di bawah kurva dan di luar interval antara t-score tersebut dan
+# negatif dari nilai t-score tersebut?
+# Jawab : 
+x <- 1 - (0.0333/2)
+df <- 23
+ans <- qt(x, df=df)
+ans
+  
