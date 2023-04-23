@@ -169,7 +169,7 @@ ans
 set.seed(123456789)
 n <- 500
 v <- 10
-hist(rchisq(n, v), xlab = "X", ylab = "Probabilitas", main = "Histogram Chi-Square")
+hist(rchisq(n, v), xlab = "X", ylab = "Jumlah", main = "Histogram Chi-Square")
 
 # Poin 3c.
 # Nilai rataan (μ) dan varian (σ²) dari distribusi Chi-Square
@@ -264,6 +264,16 @@ ans <- 1 - ( 2 * pt(q=q, df=df))
 ans
 
 # Poin 5e.
+# Berapa nilai t-score dengan 5 derajat kebebasan yang memiliki luasan 0,0333
+# satuan persegi di bawah kurva dan di sebelah kiri t-score tersebut?
+# Jawab :
+x <- 0.0333
+df <- 5
+ans <- qt(x, df=df)
+ans
+
+
+# Poin 5f.
 # Berapa nilai t-score dengan 25 derajat kebebasan yang memiliki luasan 0,125
 # satuan persegi di bawah kurva dan di sebelah kanan t-score tersebut?
 # Jawab : 
@@ -272,7 +282,7 @@ df <- 25
 ans <- qt(x, df=df)
 ans
 
-# Poin 5f.
+# Poin 5g.
 # Berapa nilai t-score dengan 11 derajat kebebasan yang memiliki luasan 0,75
 # satuan persegi di bawah kurva dan di antara t-score tersebut dan negatif dari
 # nilai t-score tersebut?
@@ -282,7 +292,7 @@ df <- 11
 ans <- qt(x, df=df)
 ans
 
-# Poin 5g.
+# Poin 5h.
 # Berapa nilai t-score dengan 23 derajat kebebasan yang memiliki luasan 0,0333
 # satuan persegi di bawah kurva dan di luar interval antara t-score tersebut dan
 # negatif dari nilai t-score tersebut?
