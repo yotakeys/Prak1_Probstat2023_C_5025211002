@@ -88,7 +88,7 @@ plot(n, dbinom(x=n, size=size, prob=p),
 # Jawab : Kejadianya tergolong tidak biasa, namun bukan yang sangat jarang
 # Karena kemungkinan terjadinya tergolong tidak terlalu jauh dengan
 # kemungkinan terjaidnya pada daerah dekat dengan lambda, yaitu->
-x <- 0
+x <- 4
 lambda <- 1.8
 ans <- dpois(x=x,lambda=lambda)
 ans
