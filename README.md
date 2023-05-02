@@ -126,13 +126,13 @@ berdasarkan distribusi yang telah dipilih.
 ##### Penyelesaian :
 Kejadianya tergolong tidak biasa, namun bukan yang sangat jarang Karena kemungkinan terjadinya tergolong tidak terlalu jauh dengan kemungkinan terjaidnya pada daerah dekat dengan lambda, untuk mencari probabilitasnya kita hanya perlu menggunakan fungsi `dpois(x, lambda)`, dengan x adalah titik yang ingin dicari, dan lambda adalah tingkat keberhasilan rata rata.
 ```R
-x <- 0
+x <- 4
 lambda <- 1.8
 ans <- dpois(x=x,lambda=lambda)
 ans
 ```
 ##### Output (`Dapat dilihat pada console kiri bawah`) :
-<img width="960" alt="image" src="https://user-images.githubusercontent.com/85614845/233846292-923c9dc1-70eb-473d-9913-01eb6d3345c5.png">
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/85614845/235758320-ee45332c-75b5-4bed-a009-4e768245091b.png">
 
 #### 2 C.
 Berapa peluang paling banyak 4 kematian akibat kanker tulang?
