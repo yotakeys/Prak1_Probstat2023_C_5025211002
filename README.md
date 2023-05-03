@@ -216,11 +216,10 @@ Bandingkan jawaban pada pertanyaan 2d dengan hasil simulasi Anda.
 ```
 Pada simulasi dengan set.seed(123456789) agar reproducible dengan jumlah simulasi n = 10
 Didapat hasil [2,2,2,2,4,4,1,4,1,1], dari hasil simulasi tersebut dapat kita lihat hasil 
-yang muncul cukup beragam, namun tidak terlalu jauh dari nilai lambda/mean yaitu 1.8
-karena kemungkinan terbesar kematian terjadi terletak pada daerah dekat lambda/ range 0-5
-Seperti jawaban 2d, kejadian kematian = 4 bukanlah hal yang biasa, namun tidak jarang terjadi
-dibuktikan dengan kemunculan yang cukup sering pada simulasi (walaupun tergantung seed pada simulasi)
-jumlah kematian yang biasa terjadi terletak pada angka 1 atau 2 (setelah dibandingkan dengan beberapa seed lain)
+yang muncul cukup beragam, namun tidak terlalu jauh dari nilai lambda/mean yaitu 1.8.
+Sehingga kejadian pada 2D atau kematian diatas 4 jarang terjadi, tetapi bukanya tidak mungkin,
+Pada beberapa kali percobaan random lainya, dapat ditemukan kematian yang lebih banyak dari 4
+sekitar pada 5-7 kematian, tapi tentu saja kemungkinannya sangat kecil.
 ```
 
 ### No 3
