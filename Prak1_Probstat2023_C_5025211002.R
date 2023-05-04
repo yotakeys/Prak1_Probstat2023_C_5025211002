@@ -158,7 +158,7 @@ ans
 # Poin 3a.
 # Fungsi probabilitas dari distribusi Chi-Square
 # Jawab : 
-x <- 2
+x <- 3
 v <- 10
 ans <- dchisq(x=x, df=v)
 ans
