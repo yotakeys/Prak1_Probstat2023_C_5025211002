@@ -230,14 +230,13 @@ Fungsi probabilitas dari distribusi Chi-Square
 ##### Penyelesaian : 
 untuk mencari fungsi probabilitas dengan diketahui x dan v nya maka kita hanya perlu menggunakan fungsi `dchisq(x, df)`
 ```R
-x <- 2
+x <- 3
 v <- 10
 ans <- dchisq(x=x, df=v)
 ans
 ```
 ##### Output (`Dapat dilihat pada console kiri bawah`) :
-<img width="960" alt="image" src="https://user-images.githubusercontent.com/85614845/233847111-03d6ee0c-5cee-4400-b4fa-29d2681c81b4.png">
-
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/85614845/236105939-123b2c78-54a0-4105-a2f7-416105eaa508.png">
 
 #### 3 B.
 Histogram dari distribusi Chi-Square dengan 500 data acak.
